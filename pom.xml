@@ -16,11 +16,15 @@
 
     <dependencies>
 
+       <!-- We need to add the 2 dependices in the pom file
+        1. Spirng Core
+        2. Spring context-->
+
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>5.3.30</version>
+            <version>6.0.6</version>
         </dependency>
 
 
@@ -28,8 +32,11 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.3.0</version>
+            <version>6.0.9</version>
         </dependency>
+
+
+
 
     </dependencies>
 

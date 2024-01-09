@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    <!--this is our bean -->
+
+    <bean class="org.example.Student" name="student1" init-method="initMethod" destroy-method="destroyMethod">
+
+        <property name="studentId" value="1"/>
+        <property name="studentName" value="Anuj"/>
+        <property name="studentAddress" value="Delhi"/>
+
+        <property name="list">
+            <list>
+                <value>12</value>
+                <value>23</value>
+                <value>44</value>
+
+            </list>
+
+
+        </property>
+
+
+        <property name="mapValue">
+            <map>
+                <entry key="23" value="Anuj"/>
+                <entry key="788" value="Kuldeep"/>
+
+
+            </map>
+
+
+        </property>
+
+    </bean>
+
+  <!--  <bean class="org.example.B" name="bclass">
+        <property name="y" value="12"/>
+    </bean>
+
+    <bean class="org.example.A" name="aclass">
+        <property name="x" value="10"/>
+        <property name="b" ref="bclass"/>
+
+    </bean>
+
+
+    <bean class="org.example.MyConstructorB" name="bconstructro">
+        <constructor-arg value="XXX"/>
+
+    </bean>
+
+    <bean class="org.example.MyConstructor" name="myconstructor">
+        <constructor-arg value="ANuj" type="String"/>
+        <constructor-arg value="Kuldeep" type="String"/>
+        <constructor-arg value="Sandeeep" type="String"/>
+        <constructor-arg ref="bconstructro" type="String"/>
+
+    </bean>-->
+
+
+
+
+
+
+</beans>
