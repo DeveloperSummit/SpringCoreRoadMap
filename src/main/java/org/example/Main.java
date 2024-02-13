@@ -9,6 +9,7 @@ public class Main {
 
 
         System.out.println("Hello world!");
+        System.out.println("hi");
 
        ApplicationContext  context = new ClassPathXmlApplicationContext("config.xml");
 
