@@ -5,7 +5,38 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
+
+
+
     public static void main(String[] args) {
+
+
+        
+
+        String currency="";
+        try {
+            double localCurrency= Double.parseDouble(currency);
+            if (localCurrency==0.0)
+            {
+                currency="";
+                System.out.println("first"+currency);
+            }else
+            {
+                System.out.println("Secound "+currency);
+            }
+        }catch (Exception e)
+        {
+            System.out.println(e);
+           // e.printStackTrace();
+            currency="HTY6YHRT";
+        }
+        System.out.println("###FINAL RESULT  "+currency);
+
+
+
+
+
+
 
 
         System.out.println("Hello world!");
@@ -32,7 +63,6 @@ public class Main {
         //   A student1 = context.getBean("aclass",A.class);
         //System.out.println(student1);
 
-
         /**
          * Below two line is used for the constructor
          * */
@@ -46,4 +76,8 @@ public class Main {
 
 
     }
+    private static void printFirstElement(String[] array) throws NullPointerException {
+        System.out.println(array[0]);
+    }
+
 }

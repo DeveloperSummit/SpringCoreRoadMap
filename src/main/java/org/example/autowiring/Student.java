@@ -6,9 +6,6 @@ public class Student {
     private int studentRollNumber;
     private Addresh addresh;
 
-
-
-
     @Override
     public String toString() {
         return "Student{" +

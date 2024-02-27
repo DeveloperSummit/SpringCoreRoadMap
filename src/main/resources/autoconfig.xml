@@ -3,21 +3,46 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- this below line is used for to enable the @Auto wiring annotation  -->
+<context:annotation-config/>
 
 
-    <bean class="org.example.autowiring.Addresh" name="addresh">
+    <!-- BY-NAME = In Case of the by name xml file search the addres name as same as the model class -->
+    <!-- BY-TYPE = In Case of the by type xml file search the address type model class name as same as the model class -->
+
+      <!--  this comment code is used for xml Autowiring through the byname, byType, constructer
+        ***********************************************************************************-->
+
+    <!--<bean class="org.example.autowiring.Addresh" name="addresh">
         <property name="addresh" value="Delhi India"/>
     </bean>
 
-    <bean class="org.example.autowiring.Student" name="studentInfo">
+
+    <bean class="org.example.autowiring.Student" name="studentInfo" autowire="byType">
 
         <property name="studentName" value="Abhisek Bhai"/>
         <property name="studentRollNumber" value="234344"/>
-        <property name="addresh" ref="addresh"/>
 
+
+    </bean>-->
+
+<!--    ***********************************************************************-->
+
+<!--
+    below code used for the Autowiring annotaion
+-->
+
+   <bean name="MyNameCOmapny" class="org.example.autowiring.secoud_funda.Company">
+        <property name="companyName" value="India mailk"/>
     </bean>
 
+    <bean name="product" class="org.example.autowiring.secoud_funda.Product">
+        <property name="productName" value="Nokia"/>
+        <property name="price" value="54.566"/>
+    </bean>
 
 
 </beans>
