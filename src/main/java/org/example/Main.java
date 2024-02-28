@@ -1,46 +1,24 @@
 package org.example;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
 
-
-
     public static void main(String[] args) {
 
-
-        
-
-        String currency="";
-        try {
-            double localCurrency= Double.parseDouble(currency);
-            if (localCurrency==0.0)
-            {
-                currency="";
-                System.out.println("first"+currency);
-            }else
-            {
-                System.out.println("Secound "+currency);
-            }
-        }catch (Exception e)
+       /* String ss=null;
+        String hhhh=ss.toString();
+        String result = Objects.toString(null, "jj");
+        System.out.println(hhhh+"check data "+result);
+        if (result.equals("y"))
         {
-            System.out.println(e);
-           // e.printStackTrace();
-            currency="HTY6YHRT";
+            System.out.println("fine");
+        }else
+        {
+            System.out.println("wrong");
         }
-        System.out.println("###FINAL RESULT  "+currency);
-
-
-
-
-
-
-
-
-        System.out.println("Hello world!");
-        System.out.println("hi");
+*/
 
        ApplicationContext  context = new ClassPathXmlApplicationContext("config.xml");
 

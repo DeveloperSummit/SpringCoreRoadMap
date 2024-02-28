@@ -2,17 +2,23 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
     <!-- this below line is used for to enable the @Auto wiring annotation  -->
 <context:annotation-config/>
+<!--
+    this below line is used for scan the beans class in xml
+-->
+    <context:component-scan base-package="org.example.spring_standlone_collection"/>
 
 
     <!-- BY-NAME = In Case of the by name xml file search the addres name as same as the model class -->
     <!-- BY-TYPE = In Case of the by type xml file search the address type model class name as same as the model class -->
+
+      <!--  this comment code is used for xml Autowiring through the byname, byType, constructer
+        ***********************************************************************************-->
 
     <!--<bean class="org.example.autowiring.Addresh" name="addresh">
         <property name="addresh" value="Delhi India"/>
@@ -27,14 +33,27 @@
 
     </bean>-->
 
+<!--    ***********************************************************************-->
+
+<!--
+    below code used for the Autowiring annotaion
+-->
+
+<!--
+    @Qualifier we used for the one bean have the two addresss solving the prblume by name.
+-->
+
    <bean name="MyNameCOmapny" class="org.example.autowiring.secoud_funda.Company">
         <property name="companyName" value="India mailk"/>
     </bean>
 
-    <bean name="product" class="org.example.autowiring.secoud_funda.Product">
+    <bean name="noikia" class="org.example.autowiring.secoud_funda.Product">
         <property name="productName" value="Nokia"/>
         <property name="price" value="54.566"/>
     </bean>
 
-
+    <bean name="samsung" class="org.example.autowiring.secoud_funda.Product">
+        <property name="productName" value="Smasung"/>
+        <property name="price" value="555.566"/>
+    </bean>
 </beans>

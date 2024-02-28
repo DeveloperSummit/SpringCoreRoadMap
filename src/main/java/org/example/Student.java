@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 public class Student {
     private int studentId;
@@ -10,6 +11,16 @@ public class Student {
 
     private List<Integer> list;
     private Map<Integer,String> mapValue;
+
+    public Properties getProperties() {
+        return properties;
+    }
+
+    public void setProperties(Properties properties) {
+        this.properties = properties;
+    }
+
+    private Properties properties;
 
     @Override
     public String toString() {

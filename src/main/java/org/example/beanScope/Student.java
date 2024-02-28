@@ -1,12 +1,12 @@
-package org.example.spring_standlone_collection;
+package org.example.beanScope;
 
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("xxxx")
+@Scope("prototype")
 public class Student {
     @Value("Anuj Singhsta")
     private String nameStudent;

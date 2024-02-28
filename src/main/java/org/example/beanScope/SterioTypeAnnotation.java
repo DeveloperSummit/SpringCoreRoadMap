@@ -1,4 +1,4 @@
-package org.example.spring_standlone_collection;
+package org.example.beanScope;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -11,6 +11,7 @@ public class SterioTypeAnnotation {
         Student myStudentInfo = context.getBean("xxxx", Student.class);
         System.out.println("MyStduentValue ::"+myStudentInfo.hashCode());
 
-
+        Student myStudentInfo1 = context.getBean("xxxx", Student.class);
+        System.out.println("MyStduentValue ::"+myStudentInfo1.hashCode());
     }
 }

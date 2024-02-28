@@ -6,6 +6,15 @@
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
+
+
+
+
+
+
+
+
+
     <!--this is our bean -->
 
     <bean class="org.example.Student" name="student1" init-method="initMethod" destroy-method="destroyMethod">
@@ -13,6 +22,10 @@
         <property name="studentId" value="1"/>
         <property name="studentName" value="Anuj"/>
         <property name="studentAddress" value="Delhi"/>
+<!--
+this last propeerty we used for configration of the database connectivyt under the Spring standlone collection
+        <property name="properties" ref="mydatabaseconnectivity"/>
+-->
 
         <property name="list">
             <list>
@@ -24,6 +37,30 @@
 
 
         </property>
+
+
+      <!-- how to create the properties for the database connectivity
+        <util:Properties id="mydatabaseconnectivity">
+            <prop key="driver">com.mysql.jdbc.Driver</prop>
+            <prop key="username">Anuj</prop>
+            <prop key="password">Anuj@12345</prop>
+            <prop key="url">mysql:jdbc://localhost:3306/database</prop>
+
+        </util:Properties>-->
+
+
+<!--
+        we need to create the this commom list out of the beans and we can used the multiple list
+  <util:list list-class="java.util.linkedlist" id="my_commenlist">
+        <value>Anuj</value>
+        <value>kuldeep</value>
+        <value>Sanddeep</value>
+    </util:list>
+
+        this is spring Standlone Collection
+        <property name="commentlist_util" ref="my_commenlist"/>
+-->
+
 
 
         <property name="mapValue">
