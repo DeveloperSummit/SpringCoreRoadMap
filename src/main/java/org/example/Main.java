@@ -3,22 +3,25 @@ package org.example;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Objects;
+
 public class Main {
 
     public static void main(String[] args) {
 
-       /* String ss=null;
-        String hhhh=ss.toString();
+        String ss=null;
+        String hhhh=ss;
         String result = Objects.toString(null, "jj");
         System.out.println(hhhh+"check data "+result);
         if (result.equals("y"))
-        {
+        //{
             System.out.println("fine");
-        }else
+        System.out.println("test");
+        /*}else
         {
             System.out.println("wrong");
-        }
-*/
+        }*/
+
 
        ApplicationContext  context = new ClassPathXmlApplicationContext("config.xml");
 

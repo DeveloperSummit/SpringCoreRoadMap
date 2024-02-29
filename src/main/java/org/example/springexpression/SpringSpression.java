@@ -1,16 +1,14 @@
-package org.example.spring_standlone_collection;
+package org.example.springexpression;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SterioTypeAnnotation {
+public class SpringSpression {
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("autoconfig.xml");
-
-        Student myStudentInfo = context.getBean("xxxx", Student.class);
-        System.out.println("MyStduentValue ::"+myStudentInfo);
-
-
+        CompanyNew companyNew=context.getBean("Comp",CompanyNew.class);
+        System.out.println(" darta" +companyNew);
     }
+
 }

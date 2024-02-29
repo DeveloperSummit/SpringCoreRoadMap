@@ -11,7 +11,12 @@
 <!--
     this below line is used for scan the beans class in xml
 -->
+
+<!--
+    this two line is used for the package scanning purpose
+-->
     <context:component-scan base-package="org.example.spring_standlone_collection"/>
+    <context:component-scan base-package="org.example"/>
 
 
     <!-- BY-NAME = In Case of the by name xml file search the addres name as same as the model class -->
