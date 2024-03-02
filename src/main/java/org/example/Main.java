@@ -9,6 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("Text");
         String ss=null;
         String hhhh=ss;
         String result = Objects.toString(null, "jj");

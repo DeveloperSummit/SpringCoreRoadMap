@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 //I am comment this annotation becuase of I am using the @bean annotation in the configuration class
 //@Component("jusier")
+
 public class Juicer {
     public String getJuicerName() {
         return juicerName;
